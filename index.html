@@ -3,215 +3,277 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rhetoric vs. Logic: High‑Profile Conservative Reactions to Charlie Kirk’s Killing</title>
+<title>Rhetoric vs. Logic: High‑Profile Conservative Reactions to Political Violence</title>
 <meta name="color-scheme" content="dark light">
 <style>
-  /* ==== High-Contrast Theme (WCAG AA+ where practical) ==== */
   :root{
-    --bg:#0a0f1a;
-    --surface:#0f1726;
-    --surface-2:#0b1323;
-    --ink:#ffffff;                 /* pure white for max contrast */
-    --muted:#c7d2e0;               /* light muted text for dark bg */
-    --rule:#2b3a55;                /* divider */
-    --accent:#2f81f7;              /* vivid blue (OK on dark) */
-    --accent-2:#ffc021;            /* amber */
-    --danger:#ff4d4f;              /* red */
-    --ok:#22c55e;                  /* green */
-    --chip:#19243a;                /* chip bg */
-    --table-head:#0d1b2a;          /* very dark header */
-    --table-row:#0f1c33;           /* zebra row */
-    --focus:#f59e0b;               /* focus ring */
+    --bg:#0a0f1a; --surface:#0f1726; --surface-2:#0b1323;
+    --ink:#ffffff; --muted:#c7d2e0; --rule:#2b3a55;
+    --accent:#2f81f7; --danger:#ff4d4f; --ok:#22c55e;
+    --chip:#19243a; --table-head:#0d1b2a; --table-row:#0f1c33; --focus:#f59e0b;
   }
   @media (prefers-color-scheme: light){
     :root{
-      --bg:#ffffff;
-      --surface:#f6f8fb;
-      --surface-2:#ffffff;
-      --ink:#0b1323;
-      --muted:#334155;
-      --rule:#cbd5e1;
-      --accent:#0f52ba;
-      --accent-2:#8a5800;
-      --danger:#b91c1c;
-      --ok:#166534;
-      --chip:#eef2ff;
-      --table-head:#0f52ba;
-      --table-row:#f1f5f9;
-      --focus:#b45309;
+      --bg:#ffffff; --surface:#f6f8fb; --surface-2:#ffffff;
+      --ink:#0b1323; --muted:#334155; --rule:#cbd5e1;
+      --accent:#0f52ba; --danger:#b91c1c; --ok:#166534;
+      --chip:#eef2ff; --table-head:#0f52ba; --table-row:#f1f5f9; --focus:#b45309;
     }
   }
-  html,body{height:100%}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,"Noto Sans",Arial,"Apple Color Emoji","Segoe UI Emoji";
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-  .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,"Noto Sans",Arial;
+       line-height:1.6;}
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 100px}
   header{margin-bottom:20px}
-  .eyebrow{
-    font-size:12px;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--muted)
-  }
-  h1{margin:.15em 0 .3em;font-size:clamp(28px,4vw,40px);line-height:1.15;}
+  h1{margin:.15em 0 .3em;font-size:clamp(28px,4vw,40px)}
   .subtitle{color:var(--muted);max-width:72ch}
-  .grid{display:grid;grid-template-columns: 1.1fr .9fr;gap:24px}
-  @media(max-width:900px){.grid{grid-template-columns:1fr}}
-  .card{
-    background:linear-gradient(180deg,var(--surface),var(--surface-2));
-    border:1px solid var(--rule);
-    border-radius:14px;padding:18px;
-    box-shadow:0 12px 28px rgba(0,0,0,.25)
-  }
-  .card h2{margin:.2em 0 .6em;font-size:19px}
-  .lead{font-weight:700}
-  .list{padding-left:20px;margin:8px 0}
-  .list li{margin:8px 0}
-  .tag{
-    display:inline-block;background:var(--chip);border:1px solid var(--rule);
-    border-radius:999px;padding:4px 10px;margin:4px 6px 0 0;
-    font-size:12px;color:var(--ink)
-  }
+  .card{background:linear-gradient(180deg,var(--surface),var(--surface-2));
+        border:1px solid var(--rule);border-radius:14px;padding:18px;margin-bottom:20px}
   .hr{height:1px;background:var(--rule);margin:22px 0}
-  table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--rule);
-        border-radius:12px;overflow:hidden;background:var(--surface)}
-  thead th{
-    background:var(--table-head);color:#ffffff;
-    text-align:left;padding:12px;font-size:13px;letter-spacing:.02em
-  }
-  tbody td{padding:12px;border-bottom:1px solid var(--rule);vertical-align:top}
-  tbody tr:nth-child(even){background:var(--table-row)}
-  tbody tr:last-child td{border-bottom:0}
-  .pill{font-weight:700;color:var(--accent)}
-  .danger{color:var(--danger);font-weight:700}
-  .okay{color:var(--ok);font-weight:700}
-  .callout{
-    border-left:4px solid var(--accent);
-    background:rgba(47,129,247,.08);
-    padding:12px;border-radius:8px;color:var(--ink)
-  }
-  .btn{
-    display:inline-block;text-decoration:none;
-    background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;
-    font-weight:700;border:2px solid transparent;transition:filter .15s ease
-  }
-  .btn:hover{filter:brightness(1.1)}
-  .btn:focus{outline:3px solid var(--focus);outline-offset:2px}
-  .btn.secondary{
-    background:transparent;color:var(--accent);border-color:var(--accent)
-  }
-  .muted{color:var(--muted)}
-  /* Print-friendly tweaks */
-  @media print{
-    body{background:#fff;color:#000}
-    .card{box-shadow:none}
-    .btn{display:none}
-  }
+  .list{padding-left:20px;margin:8px 0}
+  .list li{margin:6px 0}
+  .rebuts{display:flex;flex-direction:column;gap:8px}
+  @media(min-width:720px){.rebuts{display:grid;grid-template-columns:1fr 1fr;gap:8px}}
+  @media(min-width:1024px){.rebuts{grid-template-columns:1fr 1fr 1fr}}
+  .rebut{display:flex;align-items:flex-start;gap:8px;
+         background:var(--chip);border:1px solid var(--rule);border-radius:12px;
+         padding:10px 12px;font-weight:600;white-space:normal;word-break:break-word}
+  .rebut .emoji{font-size:18px;line-height:1}
+  /* details blocks */
+  details.claim{border:1px solid var(--rule);border-radius:12px;background:var(--surface);
+                padding:12px 14px;margin:10px 0;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+  summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;
+          font-weight:700}
+  summary::-webkit-details-marker{display:none}
+  .caret{transition:transform .2s ease}
+  details[open] .caret{transform:rotate(90deg)}
+  .badge{display:inline-flex;align-items:center;gap:6px;background:var(--chip);
+         border:1px solid var(--rule);border-radius:999px;padding:4px 10px;
+         font-size:12px;margin-left:8px;white-space:nowrap}
+  .explain{margin:10px 0 0}
+  .equation{font-family:ui-monospace,monospace;background:var(--chip);border:1px solid var(--rule);
+            border-radius:8px;padding:10px;margin:8px 0;overflow:auto}
+  .btnrow{display:flex;gap:10px;margin:6px 0 12px}
+  .btn{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:8px 12px;
+       font-weight:700;cursor:pointer}
+  .btn.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+  a{color:#9ecbff}
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="eyebrow">BRIEF & LOGIC ANALYSIS</div>
-      <h1>Rhetoric vs. Logic: High‑Profile Conservative Reactions to Charlie Kirk’s Killing</h1>
-      <p class="subtitle">A public, citable brief that contrasts widely shared claims with formal logic tests. Built for GitHub Pages—fully static, responsive, and print‑friendly.</p>
-    </header>
+<div class="wrap">
+  <header>
+    <h1>🧠 Rhetoric vs. Logic: High‑Profile Conservative Reactions to Political Violence</h1>
+    <p class="subtitle">Contrasting high‑profile conservative rhetoric on political violence with formal logic tests. Built for GitHub Pages—fully static, responsive, and print‑friendly.</p>
+  </header>
 
-    <div class="grid">
-      <section class="card">
-        <h2>1) What Was Said</h2>
-        <p class="lead">Representative claims pulled from high‑profile conservative reactions:</p>
-        <ul class="list">
-          <li>“Radical left rhetoric caused this violence.”</li>
-          <li>“We have to beat the hell out of radical left lunatics.”</li>
-          <li>“Those celebrating Kirk’s death should face consequences.”</li>
-          <li>“We will punish those who contribute to hostile political climates.”</li>
-          <li>“Kirk’s death proves the Left is the real threat.”</li>
-        </ul>
-        <div class="callout"><strong>Notes:</strong> This brief targets <em>rhetorical patterns</em>, not personal identities. It tests claims against general free‑speech principles and basic logical norms.</div>
-      </section>
-
-      <section class="card">
-        <h2>Quick Tags</h2>
-        <div>
-          <span class="tag">Free Speech</span>
-          <span class="tag">Retaliation</span>
-          <span class="tag">Causation</span>
-          <span class="tag">Collective Guilt</span>
-          <span class="tag">Incitement</span>
-          <span class="tag">Moral Consistency</span>
-        </div>
-        <div class="hr"></div>
-        <h2>How to Use</h2>
-        <p class="muted">Use the table below to source claims, then cite the matching fallacy from the analysis in media, policy memos, or debate prep.</p>
-        <a class="btn secondary" href="#rebuttals">Jump to Rebuttals</a>
-      </section>
+  <section class="card" id="claims">
+    <h2>🗣️ + 🧩 Claims & Logic (click to expand)</h2>
+    <div class="btnrow">
+      <button class="btn" onclick="toggleAll(true)">Expand All</button>
+      <button class="btn secondary" onclick="toggleAll(false)">Collapse All</button>
     </div>
 
-    <div class="hr"></div>
-
-    <section class="card">
-      <h2>2) Why This Fails Logical Tests</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Principle Claimed</th>
-            <th>What Was Advocated</th>
-            <th>Logical Problem / Fallacy</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="pill">Free speech as universal</span></td>
-            <td>Calls for punishing critics of Kirk</td>
-            <td><strong>Special Pleading</strong> / Double Standard</td>
-          </tr>
-          <tr>
-            <td><span class="pill">Speech ≠ violence</span></td>
-            <td>Blames Left speech for violence</td>
-            <td><strong>Equivocation</strong> / Selective Causation</td>
-          </tr>
-          <tr>
-            <td><span class="pill">Nonviolence &amp; order</span></td>
-            <td>Uses violent metaphors (“beat the hell out of them”)</td>
-            <td><strong>Contradiction</strong> / Incitement Drift</td>
-          </tr>
-          <tr>
-            <td><span class="pill">Individual responsibility</span></td>
-            <td>Blames “the Left” as a whole</td>
-            <td><strong>Hasty Generalization</strong> / Collective Guilt</td>
-          </tr>
-          <tr>
-            <td><span class="pill">Moral consistency</span></td>
-            <td>Focuses only on Left violence</td>
-            <td><strong>Cherry‑Picking</strong> / Inconsistent Standards</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <div class="grid" id="rebuttals" style="margin-top:24px">
-      <section class="card">
-        <h2>3) Summary</h2>
-        <p>Prominent reactions cast Kirk’s killing as proof of a uniquely Left‑wing threat. They pledge allegiance to universal free speech while calling for punishment of offensive speech, denounce violence while using violent metaphors, and claim moral leadership while applying standards only to opponents.</p>
-      </section>
-
-      <section class="card">
-        <h2>4) One‑Line Rebuttals</h2>
+    <!-- A1 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A1.</strong> “Radical left rhetoric caused this violence.”
+        <span class="badge">🎯 Post hoc</span><span class="badge">🔁 Equivocation</span>
+      </summary>
+      <div class="explain">
         <ul class="list">
-          <li>If speech isn’t violence, you can’t blame opponents’ speech for violence.</li>
-          <li>Punishing offensive speech abandons free‑speech principles.</li>
-          <li>Violent “metaphors” contradict nonviolence claims.</li>
-          <li>Some celebrants ≠ an entire political identity (collective‑guilt fallacy).</li>
-          <li>Leadership condemns political violence across the board, not only when useful.</li>
+          <li><strong>Assertion</strong>: Speech temporally precedes violence, therefore speech caused it.</li>
+          <li><strong>Logical issue</strong>: Correlation ≠ causation; ignores confounders and counterfactuals.</li>
+          <li><strong>Consistency test</strong>: If rhetoric causes violence, evaluate right‑wing rhetoric by the same rule.</li>
         </ul>
-        <a class="btn" href="#" onclick="window.print();return false;">Print / Save PDF</a>
-      </section>
+        <details>
+          <summary>Show formal schema</summary>
+          <div class="equation">Observed: R_L before V. Infer: R_L ⇒ V (sole cause). Missing: {controls, alternative causes}. If ∀x[S(x)→¬V], blaming speech contradicts premise.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A2 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A2.</strong> “We have to beat the hell out of radical left lunatics.”
+        <span class="badge">⚖️ Contradiction</span><span class="badge">🔥 Incitement drift</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Preaches law‑and‑order/nonviolence while using violent exhortations.</li>
+          <li>Signals acceptance of force as a political tool; escalates risk of copycat harm.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">Norm: Respond to speech with speech (¬Force). Utterance U recommends Force. Therefore U violates the professed norm.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A3 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A3.</strong> “Those celebrating political violence should face consequences.”
+        <span class="badge">🧭 Special pleading</span><span class="badge">🛡️ Free‑speech carve‑out</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Creates exceptions for offensive speech despite claiming universal protection.</li>
+          <li>Often implemented as doxing/retaliation, a coercive response to speech.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">∀x[S(x)→P(x)]. ∃y[S(y)∧Offends→Sanction(y)]. Hence ¬P(y) for disliked y — contradicts universality.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A4 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A4.</strong> “We will punish those who contribute to ‘hostile climates.’”
+        <span class="badge">⚠️ Vagueness</span><span class="badge">⛔ Prior restraint</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Undefined standard enables arbitrary enforcement against disfavored viewpoints.</li>
+          <li>Threat of punishment chills lawful speech.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">Rule R lacks determinate conditions → cannot be applied consistently; chilling effect ⇒ practical suppression of protected speech.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A5 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A5.</strong> “This proves the Left is the real threat.”
+        <span class="badge">👥 Composition</span><span class="badge">📊 Hasty generalization</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Attributes actions of some individuals to an entire group identity.</li>
+          <li>Ignores counter‑examples and base rates of violence across groups.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">∃x[x∈L ∧ Violent(x)] ⟹ ∀y[y∈L→Threat(y)]  // invalid property lift from part→whole.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A6 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A6.</strong> “Universities encourage violence by allowing left‑wing speakers.”
+        <span class="badge">🧪 False cause</span><span class="badge">🎓 Policy non sequitur</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Permitting speech ≠ endorsing outcomes; conflates platforming with causation.</li>
+          <li>Leads to censorship proposals that undercut academic freedom.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">Permit(U, speech_z) ∧ Controversial(z) ⇏ Cause(U, violence). Relationship is non‑causal.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A7 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A7.</strong> “Either you’re with us or you support political violence.”
+        <span class="badge">🧩 False dilemma</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Erases middle positions (e.g., condemn violence + defend civil liberties).</li>
+          <li>Polarizes debate to pre‑justify retaliation.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">Only {Us, Pro‑violence} presented as exhaustive. But ∃ alternatives A,B,… ⇒ dichotomy is invalid.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A8 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A8.</strong> “The media has blood on its hands.”
+        <span class="badge">🧷 Guilt by association</span><span class="badge">📦 Burden shift</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Asserts institutional culpability without specific causal chain.</li>
+          <li>Demands critics disprove responsibility rather than providing evidence.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">¬∃evidence(Media cause V) but claim insists on culpability; shifts proof burden: Opponent must refute undefined link.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A9 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A9.</strong> “Anyone condemning conservatives is complicit in violence.”
+        <span class="badge">🧷 Guilt by association</span><span class="badge">🗨️ Speech‑punishment conflation</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Conflates offensive speech with moral liability for others’ acts.</li>
+          <li>Creates collective punishment logic that undermines free‑speech norms.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">S(critique) ∧ Agent commits V ⇏ Complicit(critic). Liability requires intent/causal contribution, not mere opinion.</div>
+        </details>
+      </div>
+    </details>
+
+    <!-- A10 -->
+    <details class="claim">
+      <summary><span class="caret">▶</span> <strong>A10.</strong> “Real conservatives would never do this — so the right isn’t to blame.”
+        <span class="badge">🏴 No True Scotsman</span>
+      </summary>
+      <div class="explain">
+        <ul class="list">
+          <li>Redefines the group after counter‑examples appear to protect the thesis.</li>
+        </ul>
+        <details><summary>Show formal schema</summary>
+          <div class="equation">∃x[x∈C ∧ Violent(x)]. Redefine C’ := {y|y∈C ∧ ¬Violent(y)} ⇒ claim becomes unfalsifiable.</div>
+        </details>
+      </div>
+    </details>
+  </section>
+
+  <section class="card" id="summary">
+    <h2>📝 Summary</h2>
+    <p>Prominent reactions frame political violence as proof of a uniquely Left‑wing threat. They pledge allegiance to universal free speech while calling for punishment of offensive speech, denounce violence while using violent metaphors, and claim moral leadership while applying standards only to opponents.</p>
+  </section>
+
+  <section class="card" id="rebuttals">
+    <h2>⚔️ One‑Line Rebuttals</h2>
+    <div class="rebuts">
+      <div class="rebut"><span class="emoji">🧭</span> If speech isn’t violence, you can’t blame opponents’ speech for violence.</div>
+      <div class="rebut"><span class="emoji">🛡️</span> Punishing offensive speech abandons free‑speech principles.</div>
+      <div class="rebut"><span class="emoji">⚖️</span> Violent metaphors contradict claimed nonviolence.</div>
+      <div class="rebut"><span class="emoji">👥</span> Some celebrants ≠ an entire political identity (composition fallacy).</div>
+      <div class="rebut"><span class="emoji">🔁</span> “Whataboutism” doesn’t answer the charge; it concedes inconsistency.</div>
+      <div class="rebut"><span class="emoji">🧪</span> Post hoc isn’t proof — correlation ≠ causation.</div>
+      <div class="rebut"><span class="emoji">🎯</span> Address the claim, not the claimant (no ad hominem).</div>
+      <div class="rebut"><span class="emoji">🧩</span> False dilemmas hide better options; real policy isn’t binary.</div>
+      <div class="rebut"><span class="emoji">🧱</span> Redefining “true conservatives” to dodge counter‑examples = No True Scotsman.</div>
     </div>
-  </div>
+  </section>
+
+  <section class="card" id="sources">
+    <h2>📚 Sources & Further Reading</h2>
+    <ul class="list">
+      <li><a href="https://apnews.com/article/charlie-kirk-shooting-utah-valley-university-2025" target="_blank">Conservative activist Charlie Kirk fatally shot during Utah speaking event</a></li>
+      <li><a href="https://www.theguardian.com/us-news/2025/sep/11/charlie-kirk-shooting-trump" target="_blank">Trump blames ‘radical left’ after Charlie Kirk killed in Utah shooting</a></li>
+      <li><a href="https://www.politico.com/news/2025/09/11/trump-says-we-have-to-beat-the-hell-out-of-radical-left-lunatics-after-kirk-killing-00559170" target="_blank">Trump says GOP must ‘beat the hell out of radical left lunatics’ after Charlie Kirk’s killing</a></li>
+      <li><a href="https://www.washingtonpost.com/politics/2025/09/11/trump-kirk-consequences-gop-conservative/" target="_blank">Trump vows ‘consequences’ for those fueling hostile climate after Charlie Kirk’s death</a></li>
+      <li><a href="https://nypost.com/2025/09/16/us-news/eric-trump-says-his-dad-saw-charlie-kirk-like-a-second-son" target="_blank">Eric Trump says his dad saw Charlie Kirk like a ‘second son’</a></li>
+      <li><a href="https://plato.stanford.edu/entries/fallacies/" target="_blank">Stanford Encyclopedia of Philosophy — Fallacies</a></li>
+      <li><a href="https://plato.stanford.edu/entries/freedom-speech/" target="_blank">Stanford Encyclopedia of Philosophy — Freedom of Speech</a></li>
+    </ul>
+  </section>
+</div>
+
+<script>
+  function toggleAll(open) {
+    document.querySelectorAll('details.claim').forEach(d => d.open = open);
+  }
+</script>
 </body>
 </html>
